@@ -44,9 +44,7 @@ IoC(제어의 역전)라는 디자인 패턴을 구현하기 위해 사용하는
 
 애플리케이션의 핵심 비즈니스 로직과 관련 없는 부가적인 기능들을 모듈화하여 코드의 중복을 줄이고 유지보수성을 향상시키는 데에 주로 활용된다. 이를 통해 개발자는 반복 작업을 줄이고 핵심 기능 로직에만 집중할 수 있도록 한다. 쉽게 이해하면 AOP는 공통된 기능을 재사용하는 기법이라 말할 수 있다.
 
-![https://sharonprogress.tistory.com/195](attachment:0b2d987d-cd44-477e-ae59-822d6a298867:image.png)
-
-https://sharonprogress.tistory.com/195
+<img width="951" height="408" alt="Image" src="https://github.com/user-attachments/assets/432d1df5-cf0c-410d-837c-0becca07e6fe" />
 
 첨부한 그림에서는 로그인, 검색, 게시판에서 중복되는 공통 코드 부분(Logging, Security, Transaction)을 별도의 영역으로 분리하여 소스코드의 중복을 줄이고, 필요할 때마다 가져다 쓸 수 있게끔 한다.
 
@@ -136,9 +134,7 @@ Bean이 되면 Spring은 빈의 생성, 의존성 주입, 초기화, 후처리, 
 
 Bean Lifecycle은 빈이 생성되어 사용되고 사라질 때까지의 생명 주기다.
 
-![https://medium.com/@ahmed.abdelfaheem/inside-spring-boot-managing-bean-lifecycle-b46ae215ad00](attachment:702bcf02-5432-4d87-9993-4ef9d6cd5ba5:image.png)
-
-https://medium.com/@ahmed.abdelfaheem/inside-spring-boot-managing-bean-lifecycle-b46ae215ad00
+<img width="1474" height="753" alt="Image" src="https://github.com/user-attachments/assets/5349e5b1-7dbb-420c-ad94-40a7b79ee322" />
 
 Bean의 라이프사이클은 다음과 같다.
 
@@ -174,9 +170,7 @@ Bean의 라이프사이클은 다음과 같다.
 
 Bean Scope는 빈이 몇 개 생성되고 어느 범위에서 살아있는가를 의미한다.
 
-![https://medium.com/@pratik.941/understanding-java-bean-scopes-in-spring-a-detailed-guide-5999d63d0fe1](attachment:394eaf0f-2bd1-4086-ad96-3c789d94c2dd:image.png)
-
-https://medium.com/@pratik.941/understanding-java-bean-scopes-in-spring-a-detailed-guide-5999d63d0fe1
+<img width="842" height="458" alt="Image" src="https://github.com/user-attachments/assets/abf5fa4b-4e6c-411e-8fff-bbbd2c49a616" />
 
 **Singleton**
 
@@ -360,11 +354,11 @@ public class PaymentFactory {
 
 컨트롤러는 클라이언트의 요청을 직접적으로 전달받는 엔드포인트이며 Model과 View의 중간에서 역할을 수행한다. 
 
-**Spring MVC**
+### Spring MVC
 
 Spring MVC는 Spring Framework와 Servlet API를 기반으로 하는 웹 애플리케이션 프레임워크이다. 중심에는 `DispatcherServlet`이 있는 **Front Controller 패턴**이 있다. 즉, Spring MVC는 Controller, Model, View를 나누는 것과 더불어 HTTP 요청을 받아 적절한 핸들러에 연결하고, 결과를 뷰나 응답 본문으로 바꾸는 전체 실행 구조까지 제공한다.
 
-**서블릿(Servlet)이란?**
+### 서블릿(Servlet)이란?
 
 서블릿(Servlet)이란 동적 웹 페이지를 만들 때 사용되는 자바 기반의 웹 애플리케이션 프로그래밍 기술이다. 서블릿은 웹 요청과 응답의 흐름을 간단한 메서드 호출만으로 체계적으로 다룰 수 있게 해준다. 서버에서 실행되다가 웹 브라우저에서 요청을 하면 해당 기능을 수행한 후 웹 브라우저에 결과를 전송한다.
 
@@ -393,7 +387,7 @@ public class HelloServlet extends HttpServlet {
 > Spring MVC를 사용하면 개발자가 이런 식으로 요청마다 서블릿을 직접 만들기보다, **`DispatcherServlet`** 하나가 먼저 모든 요청을 받고 그 뒤를 분배한다는 점이 다르다.
 > 
 
-**WAS란?**
+### WAS란?
 
 기본적으로 **Web Server**는 HTML, CSS, JavaScript, 이미지 파일과 같은 **정적인 콘텐츠**를 클라이언트에게 응답하는 역할을 수행한다.
 
@@ -421,15 +415,11 @@ WAS와 Web Server를 분리하는 이유는 아래와 같다.
 > Spring Boot 애플리케이션은 실행과 동시에 Tomcat이 떠서 HTTP 요청을 처리할 수 있다. 스프링 부트에서는 보통 내장 톰캣을 사용하기 때문이다. 별도의 외부 서버 설정 없이도 애플리케이션 실행만으로 웹 서버가 함께 구동된다.
 > 
 
-**DispatcherServlet이란?**
-
-**DispatcherServlet이란?**
+### DispatcherServlet이란?
 
 `DispatcherServlet`은 **Spring MVC의 중심이 되는 서블릿**이다. 클라이언트의 요청을 가장 먼저 받아서, 어떤 컨트롤러가 처리해야 하는지 결정하고, 처리 결과를 최종 응답으로 만들어 주는 역할을 한다.
 
-![[https://velog.io/@jonghne/Spring-Web-MVC의-내부-구조와-동작-방식](https://velog.io/@jonghne/Spring-Web-MVC%EC%9D%98-%EB%82%B4%EB%B6%80-%EA%B5%AC%EC%A1%B0%EC%99%80-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D)](attachment:c423486f-35a3-4ac1-89d8-9fc82dfcd7fb:image.png)
-
-[https://velog.io/@jonghne/Spring-Web-MVC의-내부-구조와-동작-방식](https://velog.io/@jonghne/Spring-Web-MVC%EC%9D%98-%EB%82%B4%EB%B6%80-%EA%B5%AC%EC%A1%B0%EC%99%80-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D)
+<img width="1280" height="598" alt="Image" src="https://github.com/user-attachments/assets/df3f566f-9cad-4090-ab14-445077f3189e" />
 
 `DispatcherServlet`의 실제 요청 처리 핵심은 `doDispatch()` 메서드에 담겨 있다.
 
